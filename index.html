@@ -27,15 +27,19 @@
   <meta name="twitter:image" content="https://i.ibb.co/9HS4dWkC/logo.png">
 
   <link rel="icon" href="assets/logo.png">
+  <meta name="theme-color" content="#1c211d">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap"
     rel="stylesheet">
 
+  <!-- Preload the hero image so it's the LCP candidate, not blocked behind other requests -->
+  <link rel="preload" as="image" href="assets/coil-closeup.jpg" fetchpriority="high">
+
   <!-- This links your styles.css file -->
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
   <noscript>
     <style>
       .rv,
@@ -55,7 +59,7 @@
   <nav id="nav">
     <div class="wrap">
       <a href="#hero" class="brand">
-        <img src="assets/logo.png" alt="R S S Rewinding Service Solution logo">
+        <img src="assets/logo.png" width="300" height="300" alt="R S S Rewinding Service Solution logo" decoding="async">
         <div class="brand-text">
           <b>R S S REWINDING</b>
           <span>Service Solution</span>
@@ -95,7 +99,7 @@
   <div id="mobileMenu">
     <div class="mm-top">
       <a href="#hero" class="brand">
-        <img src="assets/logo.png" alt="RSS logo">
+        <img src="assets/logo.png" width="300" height="300" alt="RSS logo" decoding="async">
         <div class="brand-text"><b>R S S REWINDING</b><span>Service Solution</span></div>
       </a>
       <button id="navClose" aria-label="Close menu"
@@ -160,7 +164,7 @@
           <span class="fig-tag">FIG. 01 — STATOR ASSEMBLY</span>
           <div class="coil-frame">
             <img src="assets/coil-closeup.jpg" alt="Precision copper coil winding on an industrial motor stator"
-              loading="eager" data-parallax="0.14">
+              width="1000" height="750" loading="eager" fetchpriority="high" decoding="async" data-parallax="0.14">
             <div class="callout cal-1"><span class="dot"></span><span class="line"></span><span class="lbl">COPPER
                 WINDING</span></div>
             <div class="callout cal-2"><span class="lbl">INSULATION — CLASS F</span><span class="line"></span><span
@@ -188,8 +192,8 @@
     <div class="wrap">
       <div class="about-grid">
         <div class="about-img rv-scale">
-          <img src="assets/technician.jpg" alt="R S S technician inspecting a freshly rewound motor stator"
-            loading="lazy">
+          <img src="assets/technician.jpg" width="1200" height="843" alt="R S S technician inspecting a freshly rewound motor stator"
+            loading="lazy" decoding="async">
           <div class="about-img-ring"></div>
         </div>
         <div class="about-copy">
@@ -314,9 +318,9 @@
       <div class="why-grid">
         <div class="why-sticky rv-scale">
           <div class="img-stack">
-            <img src="assets/large-stator-flange.jpg"
+            <img src="assets/large-stator-flange.jpg" width="540" height="1200"
               alt="Large rewound stator with copper coils and mounting flange at R S S workshop" loading="lazy"
-              data-parallax="0.16">
+              data-parallax="0.16" decoding="async">
           </div>
         </div>
         <div class="why-rows">
@@ -442,93 +446,93 @@
       </div>
       <div class="gal-grid rv-scale" id="galGrid">
         <div class="gal-item" data-cap="Copper coil ready for installation">
-          <div class="gal-frame"><img src="assets/coil-closeup.jpg"
-              alt="Close-up of copper wire coil winding inside a motor stator" loading="lazy"></div>
+          <div class="gal-frame"><img src="assets/coil-closeup.jpg" width="1000" height="750"
+              alt="Close-up of copper wire coil winding inside a motor stator" loading="lazy" decoding="async"></div>
           <div class="gal-fig">FIG. 01 &mdash; COPPER COIL READY FOR INSTALLATION</div>
         </div>
         <div class="gal-item" data-cap="Precision rewinding in progress">
-          <div class="gal-frame"><img src="assets/technician.jpg" alt="Technician with a newly rewound motor stator"
-              loading="lazy"></div>
+          <div class="gal-frame"><img src="assets/technician.jpg" width="1200" height="843" alt="Technician with a newly rewound motor stator"
+              loading="lazy" decoding="async"></div>
           <div class="gal-fig">FIG. 02 &mdash; PRECISION REWINDING IN PROGRESS</div>
         </div>
         <div class="gal-item" data-cap="Freshly wound stator, ready for varnishing">
-          <div class="gal-frame"><img src="assets/stator-red-drape.jpg"
-              alt="Rewound copper stator coil wrapped for insulation testing" loading="lazy"></div>
+          <div class="gal-frame"><img src="assets/stator-red-drape.jpg" width="540" height="1200"
+              alt="Rewound copper stator coil wrapped for insulation testing" loading="lazy" decoding="async"></div>
           <div class="gal-fig">FIG. 03 &mdash; FRESHLY WOUND STATOR, READY FOR VARNISHING</div>
         </div>
         <div class="gal-item" data-cap="Rotor mounted for balancing">
-          <div class="gal-frame"><img src="assets/winding-rotor-blue-stand.jpg"
-              alt="Rewound rotor mounted on workshop stand" loading="lazy"></div>
+          <div class="gal-frame"><img src="assets/winding-rotor-blue-stand.jpg" width="1200" height="554"
+              alt="Rewound rotor mounted on workshop stand" loading="lazy" decoding="async"></div>
           <div class="gal-fig">FIG. 04 &mdash; ROTOR MOUNTED FOR BALANCING</div>
         </div>
         <div class="gal-item" data-cap="Large rotor assembly on the bench">
-          <div class="gal-frame"><img src="assets/large-motor-install.jpg"
-              alt="Technician working on a large industrial rotor assembly" loading="lazy"></div>
+          <div class="gal-frame"><img src="assets/large-motor-install.jpg" width="1200" height="540"
+              alt="Technician working on a large industrial rotor assembly" loading="lazy" decoding="async"></div>
           <div class="gal-fig">FIG. 05 &mdash; LARGE ROTOR ASSEMBLY ON THE BENCH</div>
         </div>
         <div class="gal-item" data-cap="Stator bore before rewinding">
-          <div class="gal-frame"><img src="assets/stator-bore.jpg"
-              alt="Interior bore of an industrial motor stator awaiting rewind" loading="lazy"></div>
+          <div class="gal-frame"><img src="assets/stator-bore.jpg" width="1050" height="738"
+              alt="Interior bore of an industrial motor stator awaiting rewind" loading="lazy" decoding="async"></div>
           <div class="gal-fig">FIG. 06 &mdash; STATOR BORE BEFORE REWINDING</div>
         </div>
         <div class="gal-item" data-cap="Lamination stack on the jig">
-          <div class="gal-frame"><img src="assets/lamination-jig.jpg"
-              alt="Motor lamination stack mounted on a workshop jig" loading="lazy"></div>
+          <div class="gal-frame"><img src="assets/lamination-jig.jpg" width="540" height="1200"
+              alt="Motor lamination stack mounted on a workshop jig" loading="lazy" decoding="async"></div>
           <div class="gal-fig">FIG. 07 &mdash; LAMINATION STACK ON THE JIG</div>
         </div>
         <div class="gal-item" data-cap="Stator lamination stack">
-          <div class="gal-frame"><img src="assets/stator-fins.jpg" alt="Close-up of stator lamination fins"
-              loading="lazy"></div>
+          <div class="gal-frame"><img src="assets/stator-fins.jpg" width="864" height="607" alt="Close-up of stator lamination fins"
+              loading="lazy" decoding="async"></div>
           <div class="gal-fig">FIG. 08 &mdash; STATOR LAMINATION STACK</div>
         </div>
         <div class="gal-item" data-cap="Mid-winding, coil by coil">
-          <div class="gal-frame"><img src="assets/stator-winding-progress.jpg"
-              alt="Stator being hand-wound with copper wire" loading="lazy"></div>
+          <div class="gal-frame"><img src="assets/stator-winding-progress.jpg" width="540" height="1200"
+              alt="Stator being hand-wound with copper wire" loading="lazy" decoding="async"></div>
           <div class="gal-fig">FIG. 09 &mdash; MID-WINDING, COIL BY COIL</div>
         </div>
         <div class="gal-item" data-cap="Rotor assembly, ready for the line">
-          <div class="gal-frame"><img src="assets/rotor-assembly-hoist.jpg"
-              alt="Motor rotor assembly suspended during rebuild" loading="lazy"></div>
+          <div class="gal-frame"><img src="assets/rotor-assembly-hoist.jpg" width="540" height="1200"
+              alt="Motor rotor assembly suspended during rebuild" loading="lazy" decoding="async"></div>
           <div class="gal-fig">FIG. 10 &mdash; ROTOR ASSEMBLY, READY FOR THE LINE</div>
         </div>
         <div class="gal-item" data-cap="Winding machine, second bay">
-          <div class="gal-frame"><img src="assets/winding-machine-2.jpg"
-              alt="Second winding machine with red coil mounted" loading="lazy"></div>
+          <div class="gal-frame"><img src="assets/winding-machine-2.jpg" width="1200" height="843"
+              alt="Second winding machine with red coil mounted" loading="lazy" decoding="async"></div>
           <div class="gal-fig">FIG. 11 &mdash; WINDING MACHINE, SECOND BAY</div>
         </div>
         <div class="gal-item" data-cap="Compressor unit in for overhaul">
-          <div class="gal-frame"><img src="assets/pump-casing-1.jpg"
-              alt="Industrial compressor motor unit during teardown" loading="lazy"></div>
+          <div class="gal-frame"><img src="assets/pump-casing-1.jpg" width="1200" height="554"
+              alt="Industrial compressor motor unit during teardown" loading="lazy" decoding="async"></div>
           <div class="gal-fig">FIG. 12 &mdash; COMPRESSOR UNIT IN FOR OVERHAUL</div>
         </div>
         <div class="gal-item" data-cap="Compressor internals during overhaul">
-          <div class="gal-frame"><img src="assets/pump-internals.jpg"
-              alt="Internal crankshaft mechanism of an industrial compressor" loading="lazy"></div>
+          <div class="gal-frame"><img src="assets/pump-internals.jpg" width="1200" height="554"
+              alt="Internal crankshaft mechanism of an industrial compressor" loading="lazy" decoding="async"></div>
           <div class="gal-fig">FIG. 13 &mdash; COMPRESSOR INTERNALS DURING OVERHAUL</div>
         </div>
         <div class="gal-item" data-cap="Generator casing, ready for rewind">
-          <div class="gal-frame"><img src="assets/generator-casing.jpg"
-              alt="Large industrial generator casing at the workshop" loading="lazy"></div>
+          <div class="gal-frame"><img src="assets/generator-casing.jpg" width="1200" height="554"
+              alt="Large industrial generator casing at the workshop" loading="lazy" decoding="async"></div>
           <div class="gal-fig">FIG. 14 &mdash; GENERATOR CASING, READY FOR REWIND</div>
         </div>
         <div class="gal-item" data-cap="On the shop floor">
-          <div class="gal-frame"><img src="assets/technician-alt.jpg" alt="R S S technician beside a rewound stator"
-              loading="lazy"></div>
+          <div class="gal-frame"><img src="assets/technician-alt.jpg" width="1200" height="900" alt="R S S technician beside a rewound stator"
+              loading="lazy" decoding="async"></div>
           <div class="gal-fig">FIG. 15 &mdash; ON THE SHOP FLOOR</div>
         </div>
         <div class="gal-item" data-cap="Tools and coil at the worktable">
-          <div class="gal-frame"><img src="assets/worktable.jpg"
-              alt="Workbench with hand tools and a partially wound coil" loading="lazy"></div>
+          <div class="gal-frame"><img src="assets/worktable.jpg" width="1200" height="1037"
+              alt="Workbench with hand tools and a partially wound coil" loading="lazy" decoding="async"></div>
           <div class="gal-fig">FIG. 16 &mdash; TOOLS AND COIL AT THE WORKTABLE</div>
         </div>
         <div class="gal-item" data-cap="Winding-turn counter, ready for the next job">
-          <div class="gal-frame"><img src="assets/winding-counter-machine.jpg"
-              alt="Winding turn-counter machine on stand at the R S S workshop" loading="lazy"></div>
+          <div class="gal-frame"><img src="assets/winding-counter-machine.jpg" width="1086" height="937"
+              alt="Winding turn-counter machine on stand at the R S S workshop" loading="lazy" decoding="async"></div>
           <div class="gal-fig">FIG. 17 &mdash; WINDING-TURN COUNTER, READY FOR THE NEXT JOB</div>
         </div>
         <div class="gal-item" data-cap="Freshly wound stator coil">
-          <div class="gal-frame"><img src="assets/green-winding.jpg"
-              alt="Green insulated coil winding inside a generator stator" loading="lazy"></div>
+          <div class="gal-frame"><img src="assets/green-winding.jpg" width="1200" height="843"
+              alt="Green insulated coil winding inside a generator stator" loading="lazy" decoding="async"></div>
           <div class="gal-fig">FIG. 18 &mdash; FRESHLY WOUND STATOR COIL</div>
         </div>
       </div>
@@ -759,7 +763,7 @@
     <div class="wrap">
       <div class="foot-top">
         <div>
-          <div class="foot-brand"><img src="assets/logo.png" alt="RSS logo"><b>R S S Rewinding<br>Service Solution</b>
+          <div class="foot-brand"><img src="assets/logo.png" width="300" height="300" alt="RSS logo" decoding="async"><b>R S S Rewinding<br>Service Solution</b>
           </div>
           <p class="foot-tag">Reliable rewinding. Precision engineering. Trusted performance. Industrial motor &amp;
             generator repair, Vadodara, Gujarat.</p>

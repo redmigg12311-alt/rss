@@ -38,6 +38,9 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -356,11 +359,12 @@ button {
     background: none;
     border: 1px solid var(--line-dark);
     border-radius: var(--radius-sm);
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
     align-items: center;
     justify-content: center;
     color: var(--on-dark);
+    flex-shrink: 0;
 }
 
 #mobileMenu {
@@ -2059,5 +2063,92 @@ footer {
 @media (max-width:980px) {
     #cursorGlow {
         display: none;
+    }
+}
+
+/* ===== Small-screen hardening (down to 320px) ===== */
+@media (max-width:400px) {
+    .wrap {
+        padding: 0 16px;
+    }
+
+    #hero {
+        padding-top: 104px;
+        padding-bottom: 48px;
+    }
+
+    .hero-copy h1 {
+        font-size: clamp(30px, 8vw, 40px);
+        margin: 18px 0 18px;
+    }
+
+    .hero-copy p.lead {
+        font-size: 15.5px;
+    }
+
+    .hero-ctas {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        margin-bottom: 34px;
+    }
+
+    .hero-ctas .btn {
+        justify-content: center;
+    }
+
+    .btn {
+        padding: 13px 20px;
+        font-size: 12px;
+    }
+
+    .section-title {
+        font-size: clamp(26px, 8vw, 34px);
+    }
+
+    .warranty-num .big {
+        font-size: 58px;
+    }
+
+    .quote-block p {
+        font-size: 19px;
+    }
+
+    .team-card {
+        padding: 26px 22px;
+    }
+
+    .nav-cta {
+        gap: 10px;
+    }
+
+    #nav .wrap {
+        padding: 14px 16px;
+    }
+}
+
+
+/* Prevent any element from creating horizontal scroll on narrow devices */
+body,
+.wrap,
+section,
+header,
+footer {
+    max-width: 100%;
+}
+
+/* Larger, more comfortable tap targets on touch devices */
+@media (hover: none) and (pointer: coarse) {
+
+    #nav ul a,
+    .foot-col a,
+    .faq-q,
+    .gal-item,
+    .value-chip {
+        min-height: 44px;
+    }
+
+    .btn {
+        min-height: 46px;
     }
 }
